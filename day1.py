@@ -2,11 +2,6 @@
 import re
 from helper import InputLoader
 
-input_loader = InputLoader()
-data = input_loader.load_input_file()
-
-result = 0
-count = 0
 
 def find_first_digit(input_line: str):
     numbers = re.findall(r'\d', input_line)
@@ -48,10 +43,16 @@ def clean_up(input_line: str):
     return input_line
 
 
-for line in data:
-    new_line = clean_up(line)
-    addition = int(find_first_digit(new_line) + find_last_digit(new_line))
-    result += addition
+if __name__ == "__main__":
+    input_loader = InputLoader()
+    data = input_loader.load_input_file()
+    result = 0
+    count = 0
 
-print(result)
+    for line in data:
+        new_line = clean_up(line)
+        addition = int(find_first_digit(new_line) + find_last_digit(new_line))
+        result += addition
+
+    print(result)
 
