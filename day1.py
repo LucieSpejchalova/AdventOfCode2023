@@ -16,25 +16,16 @@ def find_last_digit(input_line: str):
 
 
 def clean_up(input_line: str):
-    change_data = {"one": "1",
-                   "two": "2",
-                   "three": "3",
-                   "four": "4",
-                   "five": "5",
-                   "six": "6",
-                   "seven": "7",
-                   "eight": "8",
-                   "nine": "9",
-                   "zero": "0",
-                   "ten": "10",
-                   "eleven": "11",
-                   "twelve": "12",
-                   "thirteen": "13",
-                   "twenty": "20",
-                   "thirty": "30",
-                   "forty": "40",
-                   "fifty": "50",
-                   "hundred": "100"
+    change_data = {"one": "o1e",
+                   "two": "t2o",
+                   "three": "t3e",
+                   "four": "f4r",
+                   "five": "f5e",
+                   "six": "s6x",
+                   "seven": "s7n",
+                   "eight": "e8t",
+                   "nine": "n9e",
+                   "zero": "z0e",
                    }
     for word, digit in change_data.items():
         if word in input_line:
@@ -55,4 +46,3 @@ if __name__ == "__main__":
         result += addition
 
     print(result)
-
